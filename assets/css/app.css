@@ -1,0 +1,186 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=League+Spartan&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: hsl(0, 0%, 90%);
+  color: hsl(60, 10%, 19%);
+  font-family: "League Spartan";
+}
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 43px;
+  height: 20px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 13px;
+  width: 13px;
+  left: 2px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #3a4452;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+#div1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#input {
+  height: 140px;
+  width: 550px;
+  border-radius: 12px;
+  background-color: hsl(0, 0%, 93%);
+  border: none;
+  text-align: right;
+  font-size: 55px;
+  font-weight: 900;
+  font-family: "League Spartan";
+  outline: none;
+  padding-right: 20px;
+  color: hsl(60, 10%, 19%);
+}
+
+#div3 {
+  /* padding: 20px; */
+  background-color: hsl(0, 5%, 81%);
+  padding: 20px 20px 20px 20px;
+  text-align: center;
+  border-radius: 12px;
+  margin-top: 25px;
+}
+.button {
+  height: 60px;
+  width: 100px;
+  margin: 14px;
+  border-radius: 12px;
+  border: none;
+  font-size: 35px;
+  font-weight: bolder;
+  padding-top: 8px;
+  color: hsl(60, 10%, 19%);
+  font-family: "League Spartan";
+  background-color: hsl(45, 7%, 89%);
+  box-shadow: 0px 4px 0px 0px hsl(35, 11%, 61%);
+  cursor: pointer;
+}
+#del {
+  font-size: 28px;
+  background-color: hsl(185, 42%, 37%);
+  color: #fff;
+  box-shadow: 0px 4px 0px 0px hsl(185, 58%, 25%);
+}
+#reset {
+  font-size: 28px;
+  background-color: hsl(185, 42%, 37%);
+  color: #fff;
+  box-shadow: 0px 4px 0px 0px hsl(185, 58%, 25%);
+  width: 235px;
+}
+#equal {
+  width: 235px;
+  background-color: hsl(25, 98%, 40%);
+  color: #fff;
+  box-shadow: 0px 4px 0px 0px hsl(25, 99%, 27%);
+}
+.button:hover {
+  background-color: hsl(0, 0%, 90%) hsl(0, 5%, 81%) hsl(0, 0%, 93%)
+    hsl(185, 42%, 37%) hsl(185, 58%, 25%) hsl(25, 99%, 27%) hsl(45, 7%, 89%)
+    hsl(35, 11%, 61%) hsl(60, 10%, 19%) hsl(0, 0%, 100%);
+  background-color: hsl(0, 0%, 100%);
+}
+#reset:hover {
+  background-color: hsl(185, 47%, 54%);
+}
+#del:hover {
+  background-color: hsl(185, 47%, 54%);
+}
+#equal:hover {
+  background-color: hsl(25, 85%, 57%);
+}
+
+@media only screen and (max-width: 580px) {
+  #input {
+    width: 415px;
+  }
+  #div3 {
+    padding: 5px 3px 3px -3px;
+  }
+  .button {
+    height: 57px;
+    width: 85px;
+    margin: 6px;
+  }
+  #equal {
+    width: 185px;
+  }
+  #reset {
+    width: 185px;
+  }
+}
+@media only screen and (max-width: 441px) {
+  #input {
+    width: 330px;
+    height: 110px;
+  }
+  #div3 {
+    padding: 5px 5px 5px 5px;
+  }
+  .button {
+    height: 50px;
+    width: 70px;
+    margin: 4px;
+    margin-top: 14px;
+  }
+  #equal {
+    width: 160px;
+  }
+  #reset {
+    width: 160px;
+  }
+}
